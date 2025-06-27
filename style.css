@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow: hidden; /* 스크롤 숨김 */
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  hyphens: none;
+  word-wrap: break-word; /* 강제로 줄 바꿈하지 않음 */
+  overflow-wrap: normal; /* 텍스트를 정상적으로 감쌈 */
+  white-space: normal;
+}
+
+.A {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 32% 36% 32%;
+  
+  grid-template-rows: 29% 47% 25%;
+}
+
+.a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+}
+.b {
+  width: 100%;
+  height: 50px;
+}
+
+.inner-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.inner-grid2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 5px;
+  position: relative;
+  overflow: hidden; /* 넘침 제한 */
+  background-size: cover; /* 셀을 가득 채우면서 잘림 */
+  background-position: center; /* 중앙 정렬 */
+}
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+
+/* 라이트 모드 스타일 */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: rgb(235, 235, 235);
+  }
+
+  .box {
+    background-color: rgb(0, 255, 238);
+  }
+  .up {
+    background-image: url("https://i.postimg.cc/ZRgJwDKR/temp-Image-FBIJsi.avif");
+  }
+  .left {
+    background-image: url("https://i.postimg.cc/dV1wKYk1/temp-Imagef-Cx-Kib.avif");
+  }
+  .down {
+    background-image: url("https://i.postimg.cc/brpfVcfq/temp-Images2-KTYF.avif");
+  }
+  .right {
+    background-image: url("https://i.postimg.cc/qMBd8TGL/temp-Imagex-Ve4-Zf.avif");
+  }
+  .text {
+    color: rgb(0, 0, 255);
+  }
+  a {
+    color: rgb(0, 0, 255);
+  }
+
+  a:visited {
+    color: rgb(0, 0, 255);
+  }
+}
+
+/* 다크 모드 스타일 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(37, 33, 41);
+  }
+
+  .box {
+    background-color: rgb(227, 72, 208);
+  }
+  .up {
+    background-image: url("https://i.postimg.cc/kG2FbdQy/temp-Imagemrhb-DD.avif");
+  }
+  .left {
+    background-image: url("https://i.postimg.cc/sgmcqKg7/temp-Image-YZIq-Kb.avif");
+  }
+  .down {
+    background-image: url("https://i.postimg.cc/nctGLNsq/temp-Image-WRvym8.avif");
+  }
+  .right {
+    background-image: url("https://i.postimg.cc/650npqxN/temp-Image0bpmv6.avif");
+  }
+  .text {
+    color: rgb(182, 29, 141);
+  }
+  a {
+    color: rgb(182, 29, 141);
+  }
+
+  a:visited {
+    color: rgb(182, 29, 141);
+  }
+}
+.text {
+  font-family: "agahnsangsoo2012", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 10px;
+  visibility: visible; /* 기본적으로 보이도록 설정 */
+  opacity: 1;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  word-break: keep-all;
+}
+.text.hidden {
+  visibility: hidden; /* 숨기기 */
+  opacity: 0; /* 투명하게 */
+}
+.z {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+}
+t {
+  width: 100%;
+  height: 100%;
+}
+.y {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 60px auto 60px;
+}
