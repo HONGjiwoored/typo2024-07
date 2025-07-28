@@ -23,7 +23,7 @@ body {
   display: grid;
   grid-template-columns: 32% 36% 32%;
   
-  grid-template-rows: 29% 47% 25%;
+  grid-template-rows: 25% 45% 25%;
 }
 
 .a {
